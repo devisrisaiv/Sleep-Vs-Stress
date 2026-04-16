@@ -325,7 +325,7 @@ def page_analyze(user):
             fig2.update_layout(paper_bgcolor="#0d1b2a",showlegend=False,height=150,margin=dict(t=5,b=5,l=5,r=5),
                                annotations=[dict(text=f"<b>{val}%</b>",font_size=15,font_color=clr,showarrow=False)])
             col.markdown(f"<p style='color:#78909c;font-size:.75rem;text-align:center'>{lbl}</p>",unsafe_allow_html=True)
-            col.plotly_chart(fig2,use_container_width=True)
+            col.plotly_chart(fig2,use_container_width=True,key=f"fig2_{lbl}")
 
         # Gauge
         fig3=go.Figure(go.Indicator(mode="gauge+number",value=score,
